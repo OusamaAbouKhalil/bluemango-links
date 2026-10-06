@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blue Mango — Links</title>
+<meta name="description" content="Blue Mango in one tap — menu, WhatsApp orders, directions, reviews and socials. Sama Center, Hosh Main Street, Sour, Lebanon.">
+<meta name="theme-color" content="#EA682E">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Blue Mango">
+<meta property="og:title" content="Blue Mango — life in full flavor">
+<meta property="og:description" content="Menu, WhatsApp orders, directions, reviews and socials — all in one place.">
+<meta property="og:image" content="https://ousamaaboukhalil.github.io/bluemango-links/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ousamaaboukhalil.github.io/bluemango-links/assets/og-image.png">
+
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Lilita+One&family=Playfair+Display:ital,wght@1,800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cream: #f4ece0;
+  --ink: #28190f;
+  --orange: #ea682e;
+  --sage: #dae1ac;
+  --sky: #93c3df;
+  --peach: #f5d8b8;
+  --font-display: "Lilita One", "Arial Black", "Segoe UI", sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-accent: "Playfair Display", Georgia, "Times New Roman", serif;
+  --ease: 140ms ease;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+}
+
+.section {
+  position: relative;
+  overflow: hidden;
+}
+.theme-orange { background: var(--orange); }
+.theme-cream { background: var(--cream); }
+
+/* Decorative paper grain, same as the main site. */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0.08;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23g)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+}
+
+/* ------------------------------------------------------------------ hero */
+.hero {
+  padding: clamp(44px, 9vw, 72px) 20px clamp(40px, 8vw, 64px);
+  text-align: center;
+}
+.hero__inner {
+  position: relative;
+  z-index: 6;
+  max-width: 480px;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  gap: 18px;
+}
+.hero__logo {
+  width: min(250px, 64vw);
+  height: auto;
+  filter: drop-shadow(5px 6px 0 rgba(40, 25, 15, 0.35));
+}
+.eyebrow {
+  --outline: var(--sky);
+  --rot: -3deg;
+  display: inline-block;
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 800;
+  font-size: clamp(19px, 2.8vw, 24px);
+  line-height: 1.2;
+  color: var(--ink);
+  transform: rotate(var(--rot));
+  text-shadow:
+    -2px -2px 0 var(--outline), 2px -2px 0 var(--outline),
+    -2px 2px 0 var(--outline), 2px 2px 0 var(--outline),
+    -3px 0 0 var(--outline), 3px 0 0 var(--outline),
+    0 -3px 0 var(--outline), 0 3px 0 var(--outline),
+    5px 7px 0 rgba(40, 25, 15, 0.3);
+}
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(38px, 9vw, 54px);
+  line-height: 1.02;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--cream);
+  text-shadow: 4px 5px 0 var(--ink);
+}
+.hero__lead {
+  font-size: 17px;
+  font-weight: 600;
+  max-width: 40ch;
+  color: var(--ink);
+}
+
+/* --------------------------------------------------------------- marquee */
+.marquee {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  background: var(--sage);
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  padding: 13px 0;
+}
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: bm-marquee 45s linear infinite;
+  will-change: transform;
+}
+.marquee__group { display: flex; flex: 0 0 auto; }
+.marquee__item {
+  padding: 0 26px;
+  font-family: var(--font-display);
+  font-size: 19px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink);
+  white-space: nowrap;
+}
+@keyframes bm-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; }
+}
+
+/* ----------------------------------------------------------------- links */
+.links {
+  padding: clamp(44px, 9vw, 72px) 20px clamp(56px, 10vw, 88px);
+}
+.links__inner {
+  position: relative;
+  z-index: 6;
+  max-width: 440px;
+  margin: 0 auto;
+  display: grid;
+  gap: 26px;
+}
+.btn {
+  --rot: 0deg;
+  --btn-bg: var(--sage);
+  --btn-fg: var(--ink);
+  --sh: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  width: 100%;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  padding: 18px 30px;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 6px 7px 0 var(--sh);
+  transform: rotate(var(--rot));
+  transition: transform var(--ease), box-shadow var(--ease),
+    background-color var(--ease), color var(--ease);
+}
+.btn:hover, .btn:focus-visible {
+  transform: rotate(var(--rot)) translate(3px, 4px);
+  box-shadow: 2px 2px 0 var(--sh);
+  color: var(--btn-fg);
+}
+.btn:active {
+  transform: rotate(var(--rot)) translate(5px, 6px);
+  box-shadow: 0 0 0 var(--sh);
+}
+.btn--cream { --btn-bg: var(--cream); }
+.btn--sage { --btn-bg: var(--sage); }
+.btn--sky { --btn-bg: var(--sky); }
+.btn--peach { --btn-bg: var(--peach); }
+.btn--orange { --btn-bg: var(--orange); --btn-fg: var(--cream); }
+.btn small {
+  display: block;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+.btn span { display: block; width: 100%; }
+
+/* ---------------------------------------------------------------- footer */
+.site-footer {
+  position: relative;
+  background: var(--ink);
+  color: var(--cream);
+  text-align: center;
+  padding: clamp(44px, 9vw, 64px) 20px 32px;
+}
+.site-footer__inner {
+  max-width: 480px;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+}
+.site-footer__sticker { width: min(170px, 44vw); height: auto; }
+.site-footer__address {
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: rgba(244, 236, 224, 0.85);
+}
+.social { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.pill-outline {
+  display: inline-block;
+  border: 2px solid var(--cream);
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--cream);
+  text-decoration: none;
+  transition: background-color var(--ease), color var(--ease);
+}
+.pill-outline:hover, .pill-outline:active {
+  background: var(--cream);
+  color: var(--ink);
+}
+.site-footer__note {
+  font-size: 13px;
+  color: rgba(244, 236, 224, 0.6);
+}
+.site-footer__note a { color: inherit; }
+</style>
+</head>
+<body>
+
+<!-- =================================================================== HERO -->
+<header class="section theme-orange grain hero">
+  <div class="hero__inner">
+    <img class="hero__logo" src="assets/blue-mango-wordmark.png" width="700" height="381" alt="Blue Mango">
+    <span class="eyebrow">certified bowl dealer</span>
+    <h1 class="hero__title">Life in full flavor</h1>
+    <p class="hero__lead">Froyo, matcha and serious dessert energy on Hosh Main Street, Sour. Everything you need, one tap away.</p>
+  </div>
+</header>
+
+<!-- ================================================================= TICKER -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <div class="marquee__group">
+      <span class="marquee__item">life in full flavor &#10038;</span>
+      <span class="marquee__item">certified bowl dealer &#10038;</span>
+      <span class="marquee__item">swirl responsibly &#10038;</span>
+      <span class="marquee__item">froyo for the people &#10038;</span>
+      <span class="marquee__item">made fresh in Sour &#10038;</span>
+      <span class="marquee__item">top it like you mean it &#10038;</span>
+    </div>
+    <div class="marquee__group">
+      <span class="marquee__item">life in full flavor &#10038;</span>
+      <span class="marquee__item">certified bowl dealer &#10038;</span>
+      <span class="marquee__item">swirl responsibly &#10038;</span>
+      <span class="marquee__item">froyo for the people &#10038;</span>
+      <span class="marquee__item">made fresh in Sour &#10038;</span>
+      <span class="marquee__item">top it like you mean it &#10038;</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================================================================== LINKS -->
+<main class="section theme-cream grain links">
+  <nav class="links__inner" aria-label="Blue Mango links">
+
+    <a class="btn btn--sage" style="--rot:-1.5deg" href="https://www.ilovebluemango.com/menu" target="_blank" rel="noopener">
+      <span>See the full menu</span>
+    </a>
+
+    <a class="btn btn--peach" style="--rot:1deg" href="https://drive.google.com/file/d/1vzEzqM4hNfUn5ulVy8BhCL7J7cS8hcnv/view" target="_blank" rel="noopener">
+      <span>Menu (PDF)</span>
+    </a>
+
+    <a class="btn btn--cream" style="--rot:-1deg" href="https://wa.me/9613836055" target="_blank" rel="noopener">
+      <span>Order on WhatsApp<small>+961 3 836 055</small></span>
+    </a>
+
+    <a class="btn btn--sky" style="--rot:1.5deg" href="https://maps.app.goo.gl/U6PZ2EWfgNzKwPwo8" target="_blank" rel="noopener">
+      <span>Get directions<small>Sama Center, Hosh Main Street, Sour</small></span>
+    </a>
+
+    <a class="btn btn--orange" style="--rot:-1.5deg" href="https://search.google.com/local/writereview?placeid=ChIJwe308b-HHhURfcJduVCmd90" target="_blank" rel="noopener">
+      <span>Leave us a review &#9733;</span>
+    </a>
+
+    <a class="btn btn--peach" style="--rot:1deg" href="https://www.instagram.com/ilovebluemango/" target="_blank" rel="noopener">
+      <span>Instagram<small>@ilovebluemango</small></span>
+    </a>
+
+    <a class="btn btn--sky" style="--rot:-1deg" href="https://www.tiktok.com/@ilovebluemango" target="_blank" rel="noopener">
+      <span>TikTok<small>@ilovebluemango</small></span>
+    </a>
+
+    <a class="btn btn--cream" style="--rot:1.5deg" href="https://www.ilovebluemango.com/" target="_blank" rel="noopener">
+      <span>ilovebluemango.com</span>
+    </a>
+
+  </nav>
+</main>
+
+<!-- ================================================================= FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <img class="site-footer__sticker" src="assets/sticker-story.png" width="1190" height="1186" loading="lazy"
+         alt="Three Blue Mango monkeys carrying a giant mango">
+    <address class="site-footer__address">
+      Sama Center, Hosh Main Street, Sour, Lebanon<br>
+      Open daily &middot; 8 AM to midnight
+    </address>
+    <div class="social">
+      <a class="pill-outline" href="https://www.instagram.com/ilovebluemango/" target="_blank" rel="noopener">Instagram</a>
+      <a class="pill-outline" href="https://www.tiktok.com/@ilovebluemango" target="_blank" rel="noopener">TikTok</a>
+      <a class="pill-outline" href="https://wa.me/9613836055" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <p class="site-footer__note">&copy; 2026 Blue Mango. All flavor reserved. &middot; <a href="qr.html">QR codes</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

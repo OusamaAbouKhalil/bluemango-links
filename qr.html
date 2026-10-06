@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blue Mango — QR Codes</title>
+<meta name="description" content="Printable QR codes for Blue Mango: links page, directions, reviews and menu.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#EA682E">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&family=Lilita+One&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #f4ece0;
+  --ink: #28190f;
+  --orange: #ea682e;
+  --sage: #dae1ac;
+  --sky: #93c3df;
+  --peach: #f5d8b8;
+  --font-display: "Lilita One", "Arial Black", "Segoe UI", sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  padding: clamp(32px, 7vw, 64px) 20px 64px;
+}
+.wrap { max-width: 960px; margin: 0 auto; text-align: center; }
+h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(32px, 7vw, 44px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--orange);
+  text-shadow: 3px 4px 0 var(--ink);
+  margin-bottom: 10px;
+}
+.sub { font-weight: 600; margin-bottom: 36px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+.card {
+  background: #fff;
+  border: 3px solid var(--ink);
+  border-radius: 20px;
+  box-shadow: 6px 7px 0 var(--ink);
+  padding: 22px;
+  display: grid;
+  gap: 14px;
+  justify-items: center;
+}
+.card img { width: 100%; max-width: 280px; height: auto; border-radius: 10px; }
+.card h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.card p { font-size: 13px; font-weight: 600; word-break: break-all; color: rgba(40,25,15,0.7); }
+.card a.dl {
+  display: inline-block;
+  background: var(--sage);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
+  box-shadow: 3px 4px 0 var(--ink);
+}
+.card a.dl:hover { transform: translate(2px, 3px); box-shadow: 1px 1px 0 var(--ink); }
+.back { display: inline-block; margin-top: 36px; font-weight: 800; color: var(--ink); }
+@media print {
+  body { background: #fff; padding: 0; }
+  .card { box-shadow: none; break-inside: avoid; }
+  .dl, .back, .sub { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Blue Mango QR Codes</h1>
+  <p class="sub">Right-click or long-press to save, or hit download. Print-friendly.</p>
+
+  <div class="grid">
+    <div class="card">
+      <img src="qr/qr-links-page.png" alt="QR code for the Blue Mango links page">
+      <h2>Links page</h2>
+      <p>ousamaaboukhalil.github.io/bluemango-links</p>
+      <a class="dl" href="qr/qr-links-page.png" download>Download PNG</a>
+    </div>
+
+    <div class="card">
+      <img src="qr/qr-location.png" alt="QR code for Blue Mango location on Google Maps">
+      <h2>Location</h2>
+      <p>maps.app.goo.gl/U6PZ2EWfgNzKwPwo8</p>
+      <a class="dl" href="qr/qr-location.png" download>Download PNG</a>
+    </div>
+
+    <div class="card">
+      <img src="qr/qr-reviews.png" alt="QR code to leave a Google review for Blue Mango">
+      <h2>Leave a review</h2>
+      <p>search.google.com/local/writereview</p>
+      <a class="dl" href="qr/qr-reviews.png" download>Download PNG</a>
+    </div>
+
+    <div class="card">
+      <img src="qr/qr-menu.png" alt="QR code for the Blue Mango menu PDF">
+      <h2>Menu (PDF)</h2>
+      <p>drive.google.com &middot; menu file</p>
+      <a class="dl" href="qr/qr-menu.png" download>Download PNG</a>
+    </div>
+  </div>
+
+  <a class="back" href="index.html">&larr; Back to links</a>
+</div>
+</body>
+</html>
